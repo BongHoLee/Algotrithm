@@ -1,9 +1,7 @@
 # Project exclude paths
 /bin/
-/.settings
-.classpath
-.project
+.classpath/
+.project/
 Algotrithm.iml
-.settings
-.
-.idea/vcs.xml
+.settings/
+.idea/

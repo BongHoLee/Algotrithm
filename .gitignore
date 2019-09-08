@@ -1,7 +1,3 @@
-# Project exclude paths
-/bin/
-.classpath/
-.project/
-Algotrithm.iml
+.idea/*
 .settings/
-.idea/
+.classpath

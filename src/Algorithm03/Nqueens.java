@@ -14,6 +14,7 @@ import java.util.Arrays;
 public class Nqueens {
     static int N = 8;
     static int[] cols = new int[N+1];
+    
     public static boolean queens(int level) {
         // not match condition (row || col || diagonal)
         if(!promise(level))

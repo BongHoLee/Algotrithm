@@ -47,7 +47,8 @@ public class CountCells {
                     || countCell(x, y-1)  || countCell(x+1, y+1)
                     || countCell(x-1, y-1 ) || countCell(x+1, y-1)
                     || countCell(x-1, y+1) ) {
-                return true;
+                System.out.println("its true");
+                return false;
             } else {
                 return false;
             }

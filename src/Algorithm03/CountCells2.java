@@ -39,6 +39,8 @@ public class CountCells2 {
             return count;
 
         else if (grid[x][y] == imagePixel) {
+
+            // 현재 위치 visited 표시 및 count ++;
             count ++;
             grid[x][y] = alreadyCounted;
 

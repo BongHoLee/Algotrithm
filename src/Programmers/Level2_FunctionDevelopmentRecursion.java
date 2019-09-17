@@ -3,43 +3,16 @@ package Programmers;
 // https://programmers.co.kr/learn/courses/30/lessons/42586
 
 
-/* 모범 답안.
-
-import java.util.*;
-
-class Solution {
-    public int[] solution(int[] progresses, int[] speeds) {
-        Queue<Integer> q = new LinkedList<>();
-        List<Integer> answerList = new ArrayList<>();
-
-        for (int i = 0; i < speeds.length; i++) {
-            double remain = (100 - progresses[i]) / (double) speeds[i];
-            int date = (int) Math.ceil(remain);
-
-            if (!q.isEmpty() && q.peek() < date) {
-                answerList.add(q.size());
-                q.clear();
-            }
-
-            q.offer(date);
-        }
-
-        answerList.add(q.size());
-
-        int[] answer = new int[answerList.size()];
-
-        for (int i = 0; i < answer.length; i++) {
-            answer[i] = answerList.get(i);
-        }
-
-        return answer;
-    }
-}
+/*
+*
+*  Recursion으로 구현해보고 싶었어요.
+*  BaseCase를 생각하자구요.
+*  수학적 귀납법도 생각합시다요 (f(n) = n + f(n-1))
 * */
 
 import java.util.Arrays;
 
-public class Level2_FunctionDevelopment {
+public class Level2_FunctionDevelopmentRecursion {
     public static void main(String[] args) {
         int[] progress = {93,30,55};
         int[] speeds = {1,30,5};
@@ -51,50 +24,50 @@ public class Level2_FunctionDevelopment {
     public static  int[] solution(int[] progress, int[] speeds) {
 
         Stackk answer = new Stackk(new int[0]);
-        Stackk progressStack = new Stackk(progress);
-        Stackk speedStack = new Stackk(speeds);
+        Stackk progressStackk = new Stackk(progress);
+        Stackk speedStackk = new Stackk(speeds);
 
-        while(progressStack.size() > 0) {
+        while(progressStackk.size() > 0) {
             int count = 0;
-
-            int topValue = progressStack.get(0);
-
-            if(topValue < 100) {
-                for (int i=0; i<progressStack.size(); i++) {
-                    int tmp = progressStack.pop();
-                    tmp += speedStack.get(i);
-                    progressStack.push(tmp);
-                }
-            } else {
-                int size = progressStack.size();
-                for (int i=0; i<size; i++) {
-                    if(progressStack.get(i) >= 100) {
-                        progressStack.pop();
-                        speedStack.pop();
-                        count+=1;
-                        i -= 1;
-                    } else {
-                        break;
-                    }
-                }
-
-                if(count > 0)
-                    answer.push(count);
-            }
+            count += countSuccess(progressStackk, speedStackk, count);
+            if(count > 0)
+                answer.push(count);
 
         }
 
         return answer.getStackArray();
     }
 
+    // recursion 메서드.
+    // progress가 100 이상이 되는 요소들을 반환한다.
+    public static int countSuccess (Stackk progress, Stackk speeds, int count) {
+        if(progress.size() > 0) {
+            int topValue = progress.get(0);
+            if(topValue >= 100) {
+                count += 1;
+                progress.pop();
+                speeds.pop();
+                count += countSuccess(progress, speeds, 0);
+            } else {
+                for (int i = 0; i< progress.size(); i++) {
+                    int tmp = progress.pop();
+                    tmp += speeds.get(i);
+                    progress.push(tmp);
+                }
+            }
+
+        }
+        return count;
+    }
+
 
 }
 
 // 필요한 스택을 배열로 직접 구현하자.
-class Stack {
+class Stackk {
     private int[] stackArr;
 
-    public Stack(int[] arr) {
+    public Stackk(int[] arr) {
         cloneToStack(arr);
     }
 

@@ -16,6 +16,7 @@ public class Level2_Joistick {
         int visitCount = 0;
         int pos = 0;
 
+
         // name중 'A'가 있는 위치는 미리 방문 완료 및 방문 횟수를 늘려줌
         for(int i=0; i<name.length(); i++) {
             if(name.charAt(i) == 'A') {

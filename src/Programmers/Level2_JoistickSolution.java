@@ -2,7 +2,8 @@ package Programmers;
 
 public class Level2_JoistickSolution {
     public static void main(String[] args) {
-        String name = "BBBBAAAABA";
+        //String name = "BBBBAAAABA";
+        String name = "ABABAAAAAAABA";
         System.out.println(solution(name));
     }
 
@@ -12,14 +13,22 @@ public class Level2_JoistickSolution {
         for(char c:name.toCharArray())
             answer+=diff[c-'A'];
 
+
+
         int length=name.length();
         int min=length-1;
 
         for(int i=0;i<length;i++){
             int next=i+1;
+
             while(next<length && name.charAt(next)=='A'){
                 next++;
             }
+
+            int countPosToTargetAroundLeft = i + length - next;
+            int pos = i;
+            int countLastToTarget = i - next;
+
             min=Math.min(min,i+length-next+Math.min(i,length-next));
         }
 

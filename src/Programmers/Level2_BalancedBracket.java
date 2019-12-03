@@ -28,7 +28,6 @@ public class Level2_BalancedBracket {
     public static String solution(String p) {
         StringBuilder answer = new StringBuilder();
 
-
         if ("".equals(p))
             return p;
         else {
@@ -43,7 +42,6 @@ public class Level2_BalancedBracket {
             return p;
         else
             return balancing(depart(p));
-
     }
 
     public static String balancing(Map<String, String> depart) {

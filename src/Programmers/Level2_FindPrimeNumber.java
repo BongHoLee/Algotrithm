@@ -3,7 +3,8 @@ package Programmers;
 
 import java.util.*;
 
-
+// 1. 주어진 수로 조합할 수 있는 모든 경우의 수를 구한다. (재귀 활용)
+// 2. 구한 경우의 수들로 부터 소수에 해당하는지 판별한다. (에라토스테네스의 체 활용)
 public class Level2_FindPrimeNumber {
     public static String num = "";
 
@@ -13,7 +14,6 @@ public class Level2_FindPrimeNumber {
     }
 
     public static int solution(String numbers) {
-        int answer = 0;
         num = numbers;
 
         int end = num.length();

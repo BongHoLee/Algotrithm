@@ -1,11 +1,20 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class TestCode {
     public static void main(String[] args) {
 
+        List<Integer> tmp1 = new ArrayList<>();
+        tmp1.add(1);
+        tmp1.add(2);
 
-        String u = "((()))()";
-        u = u.substring(1);
-        u = u.substring(0, u.length()-1);
-        System.out.println(u);
+        List<Integer> tmp2 = new ArrayList<>();
+        tmp2.add(4);
+        tmp2.add(5);
+        tmp2.addAll(tmp1);
+
+        System.out.println(tmp2);
 
     }
 

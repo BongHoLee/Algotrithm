@@ -7,8 +7,8 @@ import java.util.List;
 
 public class Level2_BiggestNumber {
     public static void main(String[] args) {
-        String number = "1231234";
-        int k = 3;
+        String number = "4177252841";
+        int k = 4;
 
         //775841
         // 4,1,2,2 제거
@@ -17,46 +17,59 @@ public class Level2_BiggestNumber {
     }
 
     public static String solution(String number, int k) {
-        String answer = "";
-        int size = number.length() - k;
-        List<Integer> nums = new ArrayList<>();
+        StringBuilder answer = new StringBuilder();
+
+
+        int[] numArr = new int[number.length()];
         char[] cs = number.toCharArray();
+        
 
         for (int i=0; i<number.length(); i++) {
-            nums.add((int)cs[i] - 48);
+            numArr[i] = ((int)cs[i] - 48);
         }
 
-        List<Integer> resultNum = new ArrayList<>();
-        searchNum(nums, resultNum, k);
 
-        for (int i=0; i<resultNum.size(); i++)
-            answer += resultNum.get(i);
-        return answer;
+        searchNum(numArr,answer, k);
+        return answer.toString();
     }
 
-    public static void searchNum(List<Integer> nums, List<Integer> resultNum, int cutoff) {
+    public static void searchNum(int[] numArr, StringBuilder answer, int cutoff) {
         if (cutoff <= 0) {
-            resultNum.addAll(nums);
+
+            for (int i=0; i<numArr.length; i++)
+                answer.append(numArr[i]);
             return;
-        } else if (nums.size() - cutoff <= 0) {
+        } else if (numArr.length - cutoff <= 0) {
             return;
         } else {
 
             int max = 0;
             int idx = 0;
-            int toLen = nums.size() - cutoff;
 
             for (int i=0; i<=cutoff; i++) {
-                if (max < nums.get(i)) {
-                    max = nums.get(i);
+                if (numArr[i] == 9) {
+                    max = 9;
+                    idx = i;
+                    break;
+                }
+                else if (max < numArr[i]) {
+                    max = numArr[i];
                     idx = i;
                 }
             }
 
-            resultNum.add(nums.get(idx));
+
+            answer.append(numArr[idx]);
+
+            int[] nextArr = new int[numArr.length - idx-1];
             cutoff = cutoff - idx;
-            nums = nums.subList(idx+1, nums.size());
-            searchNum(nums, resultNum, cutoff);
+            for (int i=0; i<nextArr.length; i++) {
+                nextArr[i] = numArr[idx+1];
+                idx +=1;
+            }
+
+            //nums = nums.subList(idx+1, nums.size());
+            searchNum(nextArr, answer, cutoff);
         }
 
     }

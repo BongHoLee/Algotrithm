@@ -91,10 +91,10 @@ public class Level2_FunctionDevelopment {
 }
 
 // 필요한 스택을 배열로 직접 구현하자.
-class Stack {
+class SStack {
     private int[] stackArr;
 
-    public Stack(int[] arr) {
+    public SStack(int[] arr) {
         cloneToStack(arr);
     }
 

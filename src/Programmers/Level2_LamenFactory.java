@@ -1,14 +1,17 @@
 package Programmers;
 
+import com.sun.tools.javadoc.ExecutableMemberDocImpl;
+
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Level2_LamenFactory {
     public static void main(String[] args) {
         int stock = 4;
-        int[] dates = {4, 10, 15};
-        int[] supplies = {20, 5, 10};
+        int[] dates = {4,10,15};
+        int[] supplies = {20,5,10};
         int k = 30;
 
         List<Integer> dateList = new ArrayList<>();
@@ -29,7 +32,6 @@ public class Level2_LamenFactory {
         int suppleCnt = 0;
         List<Integer> dateList = new ArrayList<>();
         List<Integer> suppleList = new ArrayList<>();
-
         for (int i=0; i<dates.length; i++) {
             dateList.add(dates[i]);
             suppleList.add(supplies[i]);
@@ -53,26 +55,18 @@ public class Level2_LamenFactory {
             int date = dateList.get(i);
             int supple = suppleList.get(i);
 
-            if (stock < date)
+            if (stock  < date)
                 break;
-            else
-                lastDateIdx = i;
 
-            if (maxSupple < supple)
+            if (maxSupple < supple) {
                 maxSupple = supple;
+                lastDateIdx = i;
+            }
         }
-        dateList = subListing(dateList, lastDateIdx);
-        suppleList = subListing(suppleList, lastDateIdx);
+
+       dateList.set(lastDateIdx, -1);
+       suppleList.set(lastDateIdx, -1);
 
         return stock + maxSupple;
-    }
-
-    private static List<Integer> subListing(List<Integer> list, int cutIndex) {
-
-        if (cutIndex < list.size())
-            list = list.subList(cutIndex+1, list.size());
-
-        return list;
-
     }
 }

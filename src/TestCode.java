@@ -5,14 +5,14 @@ import java.util.List;
 
 public class TestCode {
     public static void main(String[] args) {
-        List<Integer> list = new ArrayList<>();
-        list.add(1);
-        list.add(2);
-        list.add(3);
-        list.add(4);
-        list.add(5);
+        String[] fArray = {"A", "C", "F", "J", "M", "N", "R", "T"};
+        List<String> friends = new ArrayList<>();
+        for (String f : fArray)
+            friends.add(f);
 
-        System.out.println(list.subList(5, list.size()));
+        String i = friends.remove(2);
+        System.out.println(i);
+        System.out.println(friends);
 
     }
 

@@ -33,9 +33,12 @@ public class Level2_Kakao_sajin {
         } else {
             int cnt = 0;
             for (int i=start; i<end; i++) {
-                permut.add(friends.get(i));
+                String tmp = friends.remove(0);
+                permut.add(tmp);
                 cnt += permutation(data, friends, permut, start+1, end);
-                permut.remove(friends.get(i));
+                permut.remove(tmp);
+                friends.add(tmp);
+
             }
             return cnt;
         }
@@ -50,14 +53,14 @@ public class Level2_Kakao_sajin {
             int value = Integer.parseInt(Character.toString(condition.charAt(4)));
             int ganguk = Math.abs(permut.indexOf(start) - permut.indexOf(end));
 
-            if (cond == ">") {
-                if (ganguk <= value)
+            if (cond.equals(">")) {
+                if (ganguk <= value+1)
                     return false;
-            } else if (cond == "<") {
-                if (ganguk >= value)
+            } else if (cond.equals("<")) {
+                if (ganguk >= value+1)
                     return false;
             } else {
-                if (ganguk != value)
+                if (ganguk != value+1)
                     return false;
             }
         }

@@ -3,14 +3,15 @@ package Programmers;
 public class Level2_MatrixMult {
     public static void main(String[] args) {
         int[][] arr1 = {
-                {1, 4},
-                {3, 2},
-                {4, 1}
+                {2,3,2},
+                {4,2,4},
+                {3,1,4}
         };
 
         int[][] arr2 = {
-                {3, 3},
-                {3, 3}
+                {5,4,3},
+                {2,4,1},
+                {3,1,1}
         };
 
         int[][] result = solution(arr1, arr2);
@@ -24,7 +25,7 @@ public class Level2_MatrixMult {
     }
 
     public static int[][] solution(int[][] arr1, int[][] arr2) {
-        int[][] answer = new int[arr1[0].length][arr2.length];
+        int[][] answer = new int[arr1.length][arr2[0].length];
 
         for (int i=0; i<arr1.length; i++) {
 

@@ -5,11 +5,12 @@ import java.util.List;
 
 public class TestCode {
     public static void main(String[] args) {
-        char a = 'a';
-        char b = 'b';
-        String result = String.format("%s%s", Character.toString(a), Character.toString(b));
 
-        System.out.println(result);
+        int a = 30;
+        int b = 20;
+        double result = (double)a/(double)b;
+        System.out.println((int)result);
+
 
     }
 

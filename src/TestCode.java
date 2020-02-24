@@ -6,10 +6,8 @@ import java.util.List;
 public class TestCode {
     public static void main(String[] args) {
 
-        int a = 30;
-        int b = 20;
-        double result = (double)a/(double)b;
-        System.out.println((int)result);
+        boolean[] check = new boolean[1];
+        System.out.println(Arrays.toString(check));
 
 
     }

@@ -56,7 +56,7 @@ public class Level2_KAKAO_CACHE {
 }
 
 class CacheNode implements Comparable<CacheNode> {
-    private int hitNum;
+    private long hitNum;
     private String city;
 
     public CacheNode(int hitNum, String city) {

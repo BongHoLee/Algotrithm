@@ -14,6 +14,6 @@ public class CalcLen {
 		} else {
 			return 1 + len(str.substring(1));
 		}
-		
+
 	}
 }

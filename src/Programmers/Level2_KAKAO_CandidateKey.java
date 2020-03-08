@@ -34,7 +34,6 @@ public class Level2_KAKAO_CandidateKey {
         for (int i=0; i<relation[0].length; i++) {
             for (int j=0; j<relation[0].length; j++) {
                 answer += getCandidateCount(i + 1, j+1, relation[0].length, relation, Integer.toString(j), candidateSet);
-                //System.out.println(getCandidateCount(1, 1, 4, relation, "0", set));
             }
         }
         System.out.println(candidateSet);

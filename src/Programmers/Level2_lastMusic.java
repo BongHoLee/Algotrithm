@@ -11,26 +11,33 @@ public class Level2_lastMusic {
                 "13:00","13:05","WORLD","ABCDEF"
         };
 
-        solution(m, musicinfos);
+        System.out.println(solution(m, musicinfos));
 
     }
 
     public static String solution(String m, String[] musicinfos) {
-        String answer = "";
 
+        int maxPlayTime = 0;
+        String targetTitle = "";
         for (int i=0; i<musicinfos.length; i+=4) {
 
             int playTime = totalPlayTime(musicinfos[i], musicinfos[i+1]);
             String title = musicinfos[i+2];
             List<String> totalMusicMelody = toList(musicinfos[i+3]);
+
+            List<String> listenedMelody = toList(m);
             List<String> realMelody = realPlayMelody(playTime, totalMusicMelody);
-            System.out.println(playTime + " " + realMelody);
 
-
+            if (listenedMelody.containsAll(realMelody) || realMelody.containsAll(listenedMelody)) {
+                if (maxPlayTime < playTime) {
+                    maxPlayTime = playTime;
+                    targetTitle = title;
+                }
+            }
 
         }
 
-        return answer;
+        return targetTitle;
     }
 
     private static int totalPlayTime(String startTime, String endTime) {

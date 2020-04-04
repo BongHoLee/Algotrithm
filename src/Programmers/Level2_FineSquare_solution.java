@@ -2,7 +2,7 @@ package Programmers;
 
 public class Level2_FineSquare_solution {
     public static void main(String[] args) {
-        System.out.println(solution(8, 12));
+        System.out.println(solution(4,5));
     }
 
     public static long solution(long w, long h) {

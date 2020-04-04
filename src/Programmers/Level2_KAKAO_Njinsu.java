@@ -6,6 +6,10 @@ public class Level2_KAKAO_Njinsu {
 
     }
 
+    // t : 미리 구할 숫자의 개수
+    // n : 진법
+    // m : 게임에 참가하는 인원
+    // p : 튜브의 순서
     public static String solution(int n, int t, int m, int p) {
 
         StringBuilder totalCode = new StringBuilder();

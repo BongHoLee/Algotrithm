@@ -1,5 +1,6 @@
 package Line;
 
+import java.lang.reflect.Array;
 import java.util.*;
 /*
 *문제 설명
@@ -31,7 +32,8 @@ public class Ch1 {
         int answer = 0;
         List<Character> openCandidates = Arrays.asList('(',  '{',  '[',  '<');
         List<Character> closeCandidates = Arrays.asList(')',  '}',  ']',  '>');
-        List<Character> list = new ArrayList<>();
+        ArrayList<Character> list = new ArrayList<>();
+
 
         for (char c : inputString.toCharArray()) {
             if (openCandidates.contains(c)) {

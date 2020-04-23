@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Level2_BiggestNumber {
     public static void main(String[] args) {
-        String number = "10000";
+        String number = "1231234";
         int k = 2;
 
         //775841
@@ -28,43 +28,40 @@ public class Level2_BiggestNumber {
             numArr[i] = ((int)cs[i] - 48);
         }
 
-        int makeSize = numArr.length - k;
-        searchNum(numArr,resultList, k, 0, makeSize);
+        int toGetSize = numArr.length - k;
+        searchNum(numArr,resultList, k, 0, toGetSize);
+
         for (Integer integer : resultList) answer.append(integer);
         return answer.toString();
     }
 
-    public static void searchNum(int[] numArr, List<Integer> resultList, int cutoff, int curIdx, int makeSize) {
+    public static void searchNum(int[] numArr, List<Integer> resultList, int cutoff, int curIdx, int toGetSize) {
         if (cutoff <=0) {
             for (int i=curIdx; i<numArr.length; i++)
                 resultList.add(numArr[i]);
-            return;
-        } else if (resultList.size() >= makeSize ) {
-            return;
-        } else {
+        } else if (resultList.size() < toGetSize) {
 
             int max = -1;
-            int idx = curIdx;
+            int maxIdx = curIdx;
 
             for (int i=curIdx; i<=cutoff+curIdx; i++) {
                 if (numArr[i] == 9) {
                     max = 9;
-                    idx = i;
+                    maxIdx = i;
                     break;
                 }
                 else if (max < numArr[i]) {
                     max = numArr[i];
-                    idx = i;
+                    maxIdx = i;
                 }
             }
 
 
-            resultList.add(numArr[idx]);
-            cutoff = cutoff - (idx - curIdx);
-            idx += 1;
+            resultList.add(numArr[maxIdx]);
+            cutoff = cutoff - (maxIdx - curIdx);
+            maxIdx += 1;
 
-            //nums = nums.subList(idx+1, nums.size());
-            searchNum(numArr, resultList, cutoff, idx, makeSize);
+            searchNum(numArr, resultList, cutoff, maxIdx, toGetSize);
         }
 
     }

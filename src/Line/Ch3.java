@@ -5,41 +5,39 @@ import java.util.Queue;
 
 public class Ch3 {
     public static void main(String[] args) {
-        //System.out.println(solution("11101111001111101111110001111111111111111", 3));
-        System.out.println(solution("001100", 3));
+        System.out.println(solution("01110011110011011111", 3));
     }
 
-    static int solution(String road, int n) {
+    // 0 1 1 1 0 0 1 1 1 1 0 0 1 1 0 1 1 1 1 1
+
+    public static int solution (String inputString, int n) {
         int max = 0;
-        int tmpMax = 0;
-        Queue<Integer> fixedIdxQueue = new LinkedList<>();
-        fixedIdxQueue.add(-1);
+        StringBuilder sb = new StringBuilder(inputString);
+        Queue<Integer> indexQueue = new LinkedList<>();
+        indexQueue.add(-1);
 
-        for (int i=0; i<road.length(); i++) {
-            char roadIdx = road.charAt(i);
-
-            if (roadIdx != '0' && i != road.length()-1) continue;
-
-            if (n > 0) {
-                road.replaceFirst("0", "1");
-                fixedIdxQueue.add(i);
-                n --;
-            } else {
-                int firstIdx = fixedIdxQueue.poll();
-                tmpMax = i - (firstIdx + 1);
-                max = Math.max(max, tmpMax);
-                fixedIdxQueue.add(i);
+        for(int roadIndex = 0; roadIndex < sb.length(); roadIndex++) {
+            if (sb.charAt(roadIndex) == '0') {
+                // 만일 현재 위치의 문자가 '0'이면 위치를 저장
+                indexQueue.add(roadIndex);
+                if (n <= 0)
+                    max = Math.max(max, getOneLen(indexQueue, roadIndex));
+                n--;
             }
-
-            if (i == road.length()-1){
-                int firstIdx = fixedIdxQueue.poll();
-                tmpMax = road.length() - (firstIdx + 1);
-                max = Math.max(max, tmpMax);
-                fixedIdxQueue.add(i);
-            }
-
         }
 
+        max = Math.max(max, getOneLen(indexQueue, inputString.length()));
         return max;
     }
+
+    static int getOneLen(Queue<Integer> indexQueue, int to) {
+        int len = 0;
+        if (!(indexQueue.isEmpty())) {
+            int from = indexQueue.poll();
+            len = (to) - (from+1);
+        }
+
+        return len;
+    }
 }
+// 01110011110011011111

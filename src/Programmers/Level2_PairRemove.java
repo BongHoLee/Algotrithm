@@ -1,5 +1,7 @@
 package Programmers;
 
+import java.util.Stack;
+
 public class Level2_PairRemove {
     public static void main(String[] args) {
         String s = "baabaa";
@@ -7,25 +9,16 @@ public class Level2_PairRemove {
     }
 
     public static int solution(String s) {
-        int answer = 1;
-        String[] pairList = {
-                "aa", "bb", "cc", "dd", "ee", "ff", "gg", "hh", "ii", "jj", "kk", "ll", "mm", "nn",
-                "oo", "pp", "qq", "rr", "ss", "tt", "uu", "vv", "ww", "xx", "yy", "zz"
-        };
+        Stack<Character> stack = new Stack<>();
+        char[] charArray = s.toCharArray();
 
-        while (s.length() > 0 && answer == 1) {
-
-            int startLen = s.length();
-
-            for (int i=0; i<pairList.length; i++) {
-                s = s.replaceAll(pairList[i], "");
-            }
-
-            if (startLen == s.length())
-                answer = 0;
+        for (int i=0; i<charArray.length; i++) {
+            if (!stack.isEmpty() && stack.peek() == charArray[i])
+                stack.pop();
+            else
+                stack.push(charArray[i]);
         }
 
-
-        return answer;
+        return stack.isEmpty() ? 1 : 0;
     }
 }

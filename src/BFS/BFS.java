@@ -26,7 +26,7 @@ public class BFS {
             int nodex = node.getX();
             int nodey = node.getY();
             int nodelen = node.getLength();
-            
+
             if (nodex + 1 < adjacencyMatrix.length) {
                 if (adjacencyMatrix[nodex + 1][nodey] != 0 && !checked[nodex+1][nodey]) {
                     queue.add(new Node(nodex + 1, nodey, nodelen + 1, node));

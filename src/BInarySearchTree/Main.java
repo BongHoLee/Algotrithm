@@ -51,6 +51,10 @@ class BST {
         return rootNode.getNodeOfValue(value);
     }
 
+    public Node getSuccessor(int value) {
+        return null;
+    }
+
 
 }
 
@@ -88,7 +92,10 @@ class Node {
             if (leftNode == null) return null;
             return leftNode.getNodeOfValue(value);
         }
+    }
 
+    public Node getSuccessor(int value) {
+        return null;
 
     }
 

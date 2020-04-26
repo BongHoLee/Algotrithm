@@ -16,18 +16,15 @@ public class Level2_JadenCase {
                     c = Character.toUpperCase(c);
                     canUpper = false;
                 }
-            } else {
-                if (c == ' ')
-                    canUpper = true;
-                else
-                    canUpper = false;
-            }
+            } else
+                canUpper = c == ' ';
+
             sb.append(c);
         }
 
         return sb.toString();
     }
-    public static boolean isAlphabet(char c) {
+     private static boolean isAlphabet(char c) {
         return c >= 97 && c <= 122;
     }
 }

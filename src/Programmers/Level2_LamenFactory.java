@@ -7,7 +7,7 @@ import java.util.List;
 public class Level2_LamenFactory {
     public static void main(String[] args) {
         int stock = 4;
-        int[] dates = {4,10,15};
+        int[] dates =    {4,10,15};
         int[] supplies = {20,5,10};
         int k = 30;
 
@@ -36,7 +36,7 @@ public class Level2_LamenFactory {
 
         // 1. stock < k 이면 stock 일째 이내 dates 중 가장 큰 supple을 가진 공급을 받는다
         while (k > stock) {
-            stock = calcStock(stock, dateList, suppleList, k);
+            stock = calcStock(stock, dateList, suppleList);
             suppleCnt += 1;
         }
 
@@ -44,7 +44,7 @@ public class Level2_LamenFactory {
         return suppleCnt;
     }
 
-    private static int calcStock(int stock, List<Integer> dateList, List<Integer> suppleList, int k) {
+    private static int calcStock(int stock, List<Integer> dateList, List<Integer> suppleList) {
 
         int maxSupple = 0;
         int lastDateIdx = 0;

@@ -89,15 +89,15 @@ class BST {
                 if (deleteTarget.equals(deleteTarget.getParentNode().getLeftNode())) deleteTarget.getParentNode().setLeftNode(null);
                 else if (deleteTarget.equals(deleteTarget.getParentNode().getRightNode())) deleteTarget.getParentNode().setRightNode(null);
 
-            // 2. 왼쪽 자식 노드만 갖는 경우 (자식 노드가 1개인 경우)
+                // 2. 왼쪽 자식 노드만 갖는 경우 (자식 노드가 1개인 경우)
             } else if (deleteTarget.getLeftNode() != null && deleteTarget.getRightNode() == null) {
                 deleteTarget.getParentNode().setLeftNode(deleteTarget.getLeftNode());
 
-            // 3. 오른쪽 자식 노드만 갖는 경우 (자식 노드가 1개인 경우)
+                // 3. 오른쪽 자식 노드만 갖는 경우 (자식 노드가 1개인 경우)
             } else if (deleteTarget.getLeftNode() == null && deleteTarget.getRightNode() != null) {
                 deleteTarget.getParentNode().setRightNode(deleteTarget.getRightNode());
 
-            // 4. 자식 노드 둘 다 갖지 않는 경우
+                // 4. 자식 노드 둘 다 갖지 않는 경우
             } else {
                 Node successor = findSuccessor(value);
                 int successorValue = successor.getValue();

@@ -2,12 +2,26 @@ import java.util.*;
 
 public class TestCode {
     public static void main(String[] args) {
-        String number = "hi  hi hid   hi";
-        List<String> tmp = Arrays.asList(number.split("  "));
-        System.out.println(tmp);
+        Cat who = new Tiger();
+
+        who.yawl();
 
     }
-
-
-
 }
+
+class Cat {
+    public void yawl() {
+        System.out.println("CAT YAWLING : " + yawling());
+    }
+
+    public String yawling() {
+        return "mew!";
+    }
+}
+
+class Tiger extends Cat {
+    public String yawling() {
+        return "cung";
+    }
+}
+

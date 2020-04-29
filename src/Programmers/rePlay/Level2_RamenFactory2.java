@@ -9,60 +9,42 @@ import java.util.stream.Collectors;
 public class Level2_RamenFactory2 {
     public static void main(String[] args) {
         int stock = 4;
-        int[] dates =    {4, 10, 15, 20, 40, 50};
-        int[] supplies = {20, 5, 10, 7, 28, 199};
+        int[] dates = {4, 10, 15};
+        int[] supplies = {20, 5, 10};
         int k = 30;
         System.out.println(solution(stock, dates, supplies, k));
     }
 
     public static int solution(int stock, int[] dates, int[] supplies, int k) {
-        int answer = 0;
+        return sol1(stock, dates, supplies, k);
+    }
 
-        int lastDate = 0;
-        List<Integer> dateList = Arrays.stream(dates).boxed().collect(Collectors.toList());
-        List<Integer> supplyList = Arrays.stream(supplies).boxed().collect(Collectors.toList());
+    static int sol1(int stock, int[] dates, int[] supplies, int k) {
+        int sol1 = 0;
 
+        while (stock < k) {
+            int maxDatesIdx = 0;
 
-        Collections.sort(dateList, new Comparator<Integer>() {
-            @Override
-            public int compare(Integer o1, Integer o2) {
-                if (supplies[dateList.indexOf(o1)] > supplies[dateList.indexOf(o2)])
-                    return -1;
-                else if (supplies[dateList.indexOf(o1)] < supplies[dateList.indexOf(o2)])
-                    return 1;
+            for (int i=0; i<dates.length; i++) {
+                if (dates[i] > stock)
+                    break;
                 else
-                    return 0;
-            }
-        });
-
-        Collections.sort(supplyList, Collections.reverseOrder());
-
-
-        System.out.println(dateList);
-        System.out.println(supplyList);
-
-        while (dateList.size() > 0 && stock < k) {
-            int date = dateList.remove(0);
-            int supply = supplyList.remove(0);
-
-            if (date < lastDate)
-                continue;
-
-            if (stock < date) {
-                dateList.add(date);
-                supplyList.add(supply);
-                continue;
+                    maxDatesIdx = supplies[maxDatesIdx] < supplies[i] ? i : maxDatesIdx;
             }
 
-
-            stock += supply;
-            lastDate = date;
-            answer += 1;
-
-
+            stock += supplies[maxDatesIdx];
+            supplies[maxDatesIdx] = -1;
+            sol1 += 1;
         }
 
-
-        return answer;
+        return sol1;
     }
+
+    static int sol2(int stock, int[] dates, int[] supplies, int k) {
+        int sol2 = 0;
+
+        return sol2;
+    }
+
+
 }

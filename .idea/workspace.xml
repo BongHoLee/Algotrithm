@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="187be6e1-511a-4476-aa49-f6f10ad0b295" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Programmers/rePlay/Leve2_RamenFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Programmers/rePlay/Leve2_RamenFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Programmers/rePlay/Level2_RamenFactory2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Programmers/rePlay/Level2_RamenFactory2.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,6 +16,7 @@
   </component>
   <component name="ProjectId" id="1b6I5aMSYKfTJyYrQdKPlqNPIcZ" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -82,6 +82,7 @@
       <updated>1587946049470</updated>
       <workItem from="1587946050744" duration="2237000" />
       <workItem from="1588031925955" duration="4696000" />
+      <workItem from="1588484848932" duration="2149000" />
     </task>
     <servers />
   </component>
@@ -106,7 +107,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Programmers/rePlay/Level2_RamenFactory2.java</url>
-          <line>25</line>
+          <line>22</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

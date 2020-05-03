@@ -1,9 +1,6 @@
 package Programmers.rePlay;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Level2_RamenFactory2 {
@@ -16,7 +13,7 @@ public class Level2_RamenFactory2 {
     }
 
     public static int solution(int stock, int[] dates, int[] supplies, int k) {
-        return sol1(stock, dates, supplies, k);
+        return sol2(stock, dates, supplies, k);
     }
 
     static int sol1(int stock, int[] dates, int[] supplies, int k) {
@@ -42,6 +39,31 @@ public class Level2_RamenFactory2 {
 
     static int sol2(int stock, int[] dates, int[] supplies, int k) {
         int sol2 = 0;
+
+        PriorityQueue<Integer> prQueue = new PriorityQueue<>(new Comparator<Integer>() {
+            @Override
+            public int compare(Integer o1, Integer o2) {
+                return o2 - o1;
+            }
+        });
+
+        int lastDateIdx = 0;
+        for (int i=0; i<k; i++) {
+            if (stock <= 0)  {
+                if (!prQueue.isEmpty()) {
+                    stock += prQueue.poll();
+                    sol2 ++;
+                }
+            }
+
+            if (lastDateIdx < dates.length && i == dates[lastDateIdx]) {
+                prQueue.offer(supplies[lastDateIdx]);
+                lastDateIdx ++;
+            }
+
+            stock--;
+        }
+
 
         return sol2;
     }

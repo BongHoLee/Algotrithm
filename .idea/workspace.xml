@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="187be6e1-511a-4476-aa49-f6f10ad0b295" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+=======
+      <change beforePath="$PROJECT_DIR$/src/Programmers/rePlay/Level2_RamenFactory2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Programmers/rePlay/Level2_RamenFactory2.java" afterDir="false" />
+>>>>>>> 62aadddd6940623540af383088491c8ab48b8ee8
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,6 +19,7 @@
   </component>
   <component name="ProjectId" id="1b6I5aMSYKfTJyYrQdKPlqNPIcZ" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -80,8 +85,12 @@
       <updated>1587946049470</updated>
       <workItem from="1587946050744" duration="2237000" />
       <workItem from="1588031925955" duration="4696000" />
+<<<<<<< HEAD
       <workItem from="1588120018464" duration="1786000" />
       <workItem from="1588730379517" duration="1268000" />
+=======
+      <workItem from="1588484848932" duration="2149000" />
+>>>>>>> 62aadddd6940623540af383088491c8ab48b8ee8
     </task>
     <servers />
   </component>
@@ -100,6 +109,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="543" y="0" key="CommitChangelistDialog2" timestamp="1588718111495">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="543" y="0" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1588718111495" />
+    <state x="677" y="293" key="git4idea.merge.GitPullDialog" timestamp="1588718148321">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="677" y="293" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588718148321" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

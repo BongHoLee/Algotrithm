@@ -1,6 +1,7 @@
 package Programmers.rePlay;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Level2_NumberBaseball {
@@ -17,14 +18,19 @@ public class Level2_NumberBaseball {
     }
 
     public static int solution(int[][] baseball) {
-        int answer = 0;
         List<Integer> allCandi = allCandidates();
-
-        for (int[] each : baseball) {
-
+        for (int[] target : baseball) {
+            for (int i=0; i<allCandi.size(); i++) {
+                if (!isCandidate(allCandi.get(i), target[0], target[1], target[2])) {
+                    allCandi.remove(i);
+                    i--;
+                }
+            }
         }
 
-        return answer;
+        System.out.println(allCandi);
+
+        return allCandi.size();
     }
 
     static List<Integer> allCandidates() {
@@ -49,13 +55,24 @@ public class Level2_NumberBaseball {
     }
 
     static boolean isCandidate(int content, int target, int strike, int ball) {
-        boolean candidate = false;
 
-        for (int i=100; i>1; i/=10) {
+        List<String> contentList = new ArrayList<>();
+        List<String> targetList = new ArrayList<>();
 
+        for (int i=0; i<3; i++) {
+            contentList.add(Integer.toString(content%10));
+            targetList.add(Integer.toString(target%10));
+
+            content /= 10;
+            target /= 10;
         }
 
-        return candidate;
+        for (int i=0; i<3; i++) {
+            if (contentList.get(i).equals(targetList.get(i))) strike--;
+            else if (targetList.contains(contentList.get(i))) ball--;
+        }
+
+        return strike == 0 && ball == 0;
 
     }
 }

@@ -122,30 +122,30 @@
     <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/BongHoLee/Algotrithm&#10;&#10;# Conflicts:&#10;#&#9;src/Programmers/rePlay/Leve2_RamenFactory.java&#10;#&#9;src/Programmers/rePlay/Level2_RamenFactory2.java" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="543" y="0" key="CommitChangelistDialog2" timestamp="1588800211137">
+    <state x="543" y="0" key="CommitChangelistDialog2" timestamp="1588800293701">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="543" y="0" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1588800211137" />
+    <state x="543" y="0" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1588800293701" />
     <state x="184" y="86" key="DiffContextDialog" timestamp="1588800269698">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="184" y="86" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588800269698" />
-    <state width="1876" height="423" key="GridCell.Tab.0.bottom" timestamp="1588799586555">
+    <state width="1876" height="106" key="GridCell.Tab.0.bottom" timestamp="1588800314905">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="423" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588799586555" />
-    <state width="1876" height="423" key="GridCell.Tab.0.center" timestamp="1588799586555">
+    <state width="1876" height="106" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588800314905" />
+    <state width="1876" height="106" key="GridCell.Tab.0.center" timestamp="1588800314905">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="423" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588799586555" />
-    <state width="1876" height="423" key="GridCell.Tab.0.left" timestamp="1588799586555">
+    <state width="1876" height="106" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588800314905" />
+    <state width="1876" height="106" key="GridCell.Tab.0.left" timestamp="1588800314905">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="423" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588799586555" />
-    <state width="1876" height="423" key="GridCell.Tab.0.right" timestamp="1588799586555">
+    <state width="1876" height="106" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588800314905" />
+    <state width="1876" height="106" key="GridCell.Tab.0.right" timestamp="1588800314905">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="423" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588799586555" />
+    <state width="1876" height="106" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588800314905" />
     <state width="1876" height="423" key="GridCell.Tab.1.bottom" timestamp="1588799586555">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -166,10 +166,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1588718191060" />
-    <state x="677" y="293" key="git4idea.merge.GitPullDialog" timestamp="1588800216276">
+    <state x="677" y="293" key="git4idea.merge.GitPullDialog" timestamp="1588800301986">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="677" y="293" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588800216276" />
+    <state x="677" y="293" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588800301986" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

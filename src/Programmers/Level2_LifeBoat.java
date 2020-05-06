@@ -14,7 +14,7 @@ public class Level2_LifeBoat {
 
     public static int solution(int[] people, int limit) {
         List<Integer> lifeBoat = new ArrayList<>();
-        
+
         for (int i=0; i<people.length; i++) {
             int peopleWeight = people[i];
             if (peopleWeight / 2 >= limit) {

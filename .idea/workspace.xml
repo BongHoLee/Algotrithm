@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="178e5a35-5b3c-4e9a-b44e-632e62c6c9e1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Programmers/Level2_LifeBoat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Programmers/Level2_LifeBoat2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Programmers/Level2_LifeBoat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Programmers/Level2_LifeBoat.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +31,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Application.Level2_LifeBoat">
+  <component name="RunManager" selected="Application.Level2_LifeBoat2">
     <configuration name="Leve2_RamenFactory" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Programmers.rePlay.Leve2_RamenFactory" />
       <module name="Algotrithm" />
@@ -46,6 +47,19 @@
     </configuration>
     <configuration name="Level2_LifeBoat" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Programmers.Level2_LifeBoat" />
+      <module name="Algotrithm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Programmers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Level2_LifeBoat2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Programmers.Level2_LifeBoat2" />
       <module name="Algotrithm" />
       <extension name="coverage">
         <pattern>
@@ -85,6 +99,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Level2_LifeBoat2" />
         <item itemvalue="Application.Level2_LifeBoat" />
         <item itemvalue="Application.Level2_NumberBaseball" />
         <item itemvalue="Application.Level2_RamenFactory2" />
@@ -120,7 +135,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588800294326</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="프로그래머스 레벨2 구명 보트 문제 풀이 (실패 버전)">
+      <created>1588801924714</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1588801924714</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,55 +162,58 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <MESSAGE value="Merge branch 'master' of https://github.com/BongHoLee/Algotrithm&#10;&#10;# Conflicts:&#10;#&#9;src/Programmers/rePlay/Leve2_RamenFactory.java&#10;#&#9;src/Programmers/rePlay/Level2_RamenFactory2.java" />
     <MESSAGE value="숫자야구 replay 완료" />
-    <option name="LAST_COMMIT_MESSAGE" value="숫자야구 replay 완료" />
+    <MESSAGE value="프로그래머스 레벨2 문제 풀이 (실패 버전)" />
+    <MESSAGE value="프로그래머스 레벨2 구명 보트 문제 풀이 (실패 버전)" />
+    <option name="LAST_COMMIT_MESSAGE" value="프로그래머스 레벨2 구명 보트 문제 풀이 (실패 버전)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="765" y="223" key="#com.intellij.ide.util.MemberChooser" timestamp="1588801034799">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="223" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1588801034799" />
-    <state x="543" y="0" key="CommitChangelistDialog2" timestamp="1588800293701">
+    <state x="543" y="0" key="CommitChangelistDialog2" timestamp="1588801924199">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="543" y="0" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1588800293701" />
+    <state x="543" y="0" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1588801924199" />
     <state x="184" y="86" key="DiffContextDialog" timestamp="1588800269698">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="184" y="86" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588800269698" />
-    <state width="938" height="290" key="GridCell.Tab.0.bottom" timestamp="1588801781862">
+    <state width="1876" height="236" key="GridCell.Tab.0.bottom" timestamp="1588803328841">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="290" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588801781862" />
-    <state width="938" height="290" key="GridCell.Tab.0.center" timestamp="1588801781862">
+    <state width="1876" height="236" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588803328841" />
+    <state width="1876" height="236" key="GridCell.Tab.0.center" timestamp="1588803328841">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="290" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588801781862" />
-    <state width="938" height="290" key="GridCell.Tab.0.left" timestamp="1588801781862">
+    <state width="1876" height="236" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588803328841" />
+    <state width="1876" height="236" key="GridCell.Tab.0.left" timestamp="1588803328841">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="290" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588801781862" />
-    <state width="938" height="290" key="GridCell.Tab.0.right" timestamp="1588801781862">
+    <state width="1876" height="236" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588803328841" />
+    <state width="1876" height="236" key="GridCell.Tab.0.right" timestamp="1588803328841">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="290" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588801781862" />
-    <state width="1876" height="423" key="GridCell.Tab.1.bottom" timestamp="1588799586555">
+    <state width="1876" height="236" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588803328841" />
+    <state width="1876" height="423" key="GridCell.Tab.1.bottom" timestamp="1588802442680">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="423" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588799586555" />
-    <state width="1876" height="423" key="GridCell.Tab.1.center" timestamp="1588799586555">
+    <state width="1876" height="423" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588802442680" />
+    <state width="1876" height="423" key="GridCell.Tab.1.center" timestamp="1588802442680">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="423" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588799586555" />
-    <state width="1876" height="423" key="GridCell.Tab.1.left" timestamp="1588799586555">
+    <state width="1876" height="423" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588802442680" />
+    <state width="1876" height="423" key="GridCell.Tab.1.left" timestamp="1588802442680">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="423" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588799586555" />
-    <state width="1876" height="423" key="GridCell.Tab.1.right" timestamp="1588799586555">
+    <state width="1876" height="423" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588802442680" />
+    <state width="1876" height="423" key="GridCell.Tab.1.right" timestamp="1588802442680">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="423" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588799586555" />
+    <state width="1876" height="423" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588802442680" />
     <state x="440" y="94" key="SettingsEditor" timestamp="1588800481153">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

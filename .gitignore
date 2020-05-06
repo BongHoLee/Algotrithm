@@ -2,7 +2,12 @@
 /build/
 /bin/
 target/
+<<<<<<< HEAD
 .idea/
+=======
+/out/
+out/
+>>>>>>> 92d40f91ece71630f060069c6ef83529f39debdc
  
 # OS Files #
 .DS_Store

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="178e5a35-5b3c-4e9a-b44e-632e62c6c9e1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Programmers/Level2_LifeBoat3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Programmers/Level3_ReturnChangeCash.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,6 +22,7 @@
   </component>
   <component name="ProjectId" id="1b6I5aMSYKfTJyYrQdKPlqNPIcZ" />
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -30,7 +31,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Application.Level2_LifeBoat3">
+  <component name="RunManager" selected="Application.Level3_ReturnChangeCash">
     <configuration name="Level2_LifeBoat" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Programmers.Level2_LifeBoat" />
       <module name="Algotrithm" />
@@ -83,12 +84,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Level2_RamenFactory2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Programmers.rePlay.Level2_RamenFactory2" />
+    <configuration name="Level3_ReturnChangeCash" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Programmers.Level3_ReturnChangeCash" />
       <module name="Algotrithm" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Programmers.rePlay.*" />
+          <option name="PATTERN" value="Programmers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -98,11 +99,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Level3_ReturnChangeCash" />
         <item itemvalue="Application.Level2_LifeBoat3" />
         <item itemvalue="Application.Level2_LifeBoat2" />
         <item itemvalue="Application.Level2_LifeBoat" />
         <item itemvalue="Application.Level2_NumberBaseball" />
-        <item itemvalue="Application.Level2_RamenFactory2" />
       </list>
     </recent_temporary>
   </component>
@@ -148,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588803603138</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="프로그래머스 레벨2 구명 보트 문제 풀이 (성공버전 3)">
+      <created>1588804634822</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1588804634822</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,37 +182,38 @@
     <MESSAGE value="프로그래머스 레벨2 문제 풀이 (실패 버전)" />
     <MESSAGE value="프로그래머스 레벨2 구명 보트 문제 풀이 (실패 버전)" />
     <MESSAGE value="프로그래머스 레벨2 구명 보트 문제 풀이 (실패 버전2)" />
-    <option name="LAST_COMMIT_MESSAGE" value="프로그래머스 레벨2 구명 보트 문제 풀이 (실패 버전2)" />
+    <MESSAGE value="프로그래머스 레벨2 구명 보트 문제 풀이 (성공버전 3)" />
+    <option name="LAST_COMMIT_MESSAGE" value="프로그래머스 레벨2 구명 보트 문제 풀이 (성공버전 3)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="765" y="223" key="#com.intellij.ide.util.MemberChooser" timestamp="1588801034799">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="223" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1588801034799" />
-    <state x="543" y="0" key="CommitChangelistDialog2" timestamp="1588803602638">
+    <state x="543" y="0" key="CommitChangelistDialog2" timestamp="1588804634306">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="543" y="0" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1588803602638" />
+    <state x="543" y="0" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1588804634306" />
     <state x="184" y="86" key="DiffContextDialog" timestamp="1588800269698">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="184" y="86" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588800269698" />
-    <state width="1876" height="236" key="GridCell.Tab.0.bottom" timestamp="1588804551830">
+    <state width="1876" height="229" key="GridCell.Tab.0.bottom" timestamp="1588859797710">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="236" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588804551830" />
-    <state width="1876" height="236" key="GridCell.Tab.0.center" timestamp="1588804551830">
+    <state width="1876" height="229" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588859797710" />
+    <state width="1876" height="229" key="GridCell.Tab.0.center" timestamp="1588859797710">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="236" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588804551830" />
-    <state width="1876" height="236" key="GridCell.Tab.0.left" timestamp="1588804551830">
+    <state width="1876" height="229" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588859797710" />
+    <state width="1876" height="229" key="GridCell.Tab.0.left" timestamp="1588859797710">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="236" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588804551830" />
-    <state width="1876" height="236" key="GridCell.Tab.0.right" timestamp="1588804551830">
+    <state width="1876" height="229" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588859797710" />
+    <state width="1876" height="229" key="GridCell.Tab.0.right" timestamp="1588859797710">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="236" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588804551830" />
+    <state width="1876" height="229" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588859797710" />
     <state width="1876" height="423" key="GridCell.Tab.1.bottom" timestamp="1588804480085">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -225,10 +234,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1588800481153" />
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1588718191060">
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1588804641070">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1588718191060" />
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1588804641070" />
+    <state x="629" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1588886008124">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="629" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588886008124" />
     <state x="677" y="293" key="git4idea.merge.GitPullDialog" timestamp="1588800301986">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -241,11 +254,6 @@
           <url>file://$PROJECT_DIR$/src/Programmers/rePlay/Level2_NumberBaseball.java</url>
           <line>58</line>
           <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Programmers/Level2_LifeBoat3.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

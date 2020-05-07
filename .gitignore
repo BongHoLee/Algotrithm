@@ -34,3 +34,4 @@ tmp/**/*
 *.bak
 local.properties
 /src/main/resources/rebel.xml
+*.iml

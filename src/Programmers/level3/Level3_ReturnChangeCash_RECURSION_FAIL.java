@@ -1,9 +1,9 @@
 package Programmers.level3;
 
-public class Level3_ReturnChangeCash {
+public class Level3_ReturnChangeCash_RECURSION_FAIL {
     public static void main(String[] args) {
-        int n = 10;
-        int[] money = {1, 2, 3, 4, 5};
+        int n = 5;
+        int[] money = {1, 2, 5};
         System.out.println(solution(n, money));
     }
 

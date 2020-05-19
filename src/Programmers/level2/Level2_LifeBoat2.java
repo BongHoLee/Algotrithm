@@ -6,7 +6,7 @@ import java.util.List;
 public class Level2_LifeBoat2 {
 
     public static void main(String[] args) {
-        int[] people = {70, 50, 10, 50};
+        int[] people = {10, 50, 50, 70};
         int limit = 100;
 
         System.out.println(solution(people, limit));

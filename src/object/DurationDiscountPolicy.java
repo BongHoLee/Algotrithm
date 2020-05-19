@@ -17,7 +17,7 @@ public class DurationDiscountPolicy extends BasicRatePolicy {
 
         // 구간 별 요금 부과 규칙에 따라 하나 씩 계산
         for (DurationDiscountRule rule : rules) {
-            result.plus(rule.calculate(call));
+            result = result.plus(rule.calculate(call));
         }
         return result;
     }

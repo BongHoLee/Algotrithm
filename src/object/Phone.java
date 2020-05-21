@@ -1,6 +1,7 @@
 package object;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Phone {
@@ -16,6 +17,10 @@ public class Phone {
     }
 
     public List<Call> getCalls() {
-        return calls;
+        return Collections.unmodifiableList(calls);
+    }
+
+    public Money calculateFee() {
+        return ratePolicy.calculateFee(this);
     }
 }

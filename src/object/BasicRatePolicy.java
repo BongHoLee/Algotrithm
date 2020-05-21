@@ -8,7 +8,8 @@ public abstract class BasicRatePolicy implements RatePolicy{
         Money result = Money.ZERO;
 
         for (Call call : phone.getCalls()) {
-            result =  result.plus(calculateCallFee(call));
+             // result.plus(calculateCallFee(call));        // 기존 코드
+            result = result.plus(calculateCallFee(call));   // 수정 코드
         }
 
         return result;

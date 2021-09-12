@@ -12,8 +12,7 @@ import java.util.Stack;
 
 public class Leet_331 {
     public static void main(String[] args) {
-        //String preorder = "9,3,4,#,#,1,#,#,2,#,6,#,#";
-        String preorder = "9,3,#,4,#,#,1,#,#,2,#,6,#,#";
+        String preorder = "9,3,4,#,#,1,#,#,2,#,6,#,#";
         System.out.println(isValidSerialization(preorder));
     }
 
@@ -21,29 +20,28 @@ public class Leet_331 {
         RefInt pos = new RefInt(0);
         String[] c = preorder.split(",");
 
-        int n = c.length - 1;
+        int treeSize = c.length - 1;
 
-        callit(c, pos, n);
+        callit(c, pos, treeSize);
 
-        if (pos.idx == n)
+        if (pos.idx == treeSize)
             return true;
         return false;
     }
 
     //
-    public static boolean callit(String[] order, RefInt pos, int n) {
-        //"9,3,#,4,#,#,1,#,#,2,#,6,#,#";
+    public static boolean callit(String[] order, RefInt pos, int treeSize) {
         if (order[pos.idx].equals("#"))
             return true;
 
         // left subtree is valid
         pos.idx += 1;
-        if(pos.idx > n || !callit(order, pos, n))
+        if(pos.idx > treeSize || !callit(order, pos, treeSize))
             return false;
 
         // right subtree
         pos.idx += 1;
-        if (pos.idx > n || !callit(order, pos, n))
+        if (pos.idx > treeSize || !callit(order, pos, treeSize))
             return false;
 
         return true;

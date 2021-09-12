@@ -7,11 +7,11 @@ import leetcode.TreeNode;
 * Threaded Binary tree를 이용한 중위 순회
 * */
 
-public class BSTIterator_better {
+public class BSTIterator_ThreadBST {
 
     private TreeNode cur;
 
-    public BSTIterator_better(TreeNode root) {
+    public BSTIterator_ThreadBST(TreeNode root) {
         this.cur = root;
         init();
     }

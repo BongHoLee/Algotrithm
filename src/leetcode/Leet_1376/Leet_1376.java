@@ -1,7 +1,7 @@
-package leetcode;
+package leetcode.Leet_1376;
 
 // Tag : Tree
-// Difference : Medium
+// Difficulty : Medium
 // manager[i]는 i의 매니저이다.
 // manager[headID] = -1 (head의 매니저는 -1)
 
@@ -20,6 +20,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
+// 개발자의 가정을 이해하기 힘듦(내가 짰지만 다시봐도 이해하기가 힘듦)
 public class Leet_1376 {
     public static void main(String[] args) {
         int n = 15;
@@ -34,7 +35,9 @@ public class Leet_1376 {
     static int numOfMinutes(int n, int headID, int[] manager, int[] informTime) {
         boolean[] isVisited = new boolean[n];
         int[] visitSum = new int[n];
-        List<Integer> leafNode = IntStream.range(0, informTime.length).boxed().filter(idx -> informTime[idx] == 0).collect(Collectors.toList());
+        List<Integer> leafNode = IntStream.range(0, informTime.length).boxed()
+                .filter(idx -> informTime[idx] == 0)
+                .collect(Collectors.toList());
 
         int max = 0;
         for (int nextVisitNode : leafNode) {

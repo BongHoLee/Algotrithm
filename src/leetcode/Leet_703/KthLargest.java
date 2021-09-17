@@ -5,7 +5,8 @@ import java.util.PriorityQueue;
 // k'th largest elements get
 // 3'th largest element of [2, 4, 5, 8] -> 4
 
-// use 'heap'
+// use 'heap' ~ binary search tree
+
 public class KthLargest {
     private final int k;
 

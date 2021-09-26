@@ -1,8 +1,6 @@
 package Programmers.level2;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Kakao2021_Ranking_Search_P3 {
     public static void main(String[] args) {
@@ -30,72 +28,81 @@ public class Kakao2021_Ranking_Search_P3 {
     // info : 개발언어, 직군, 경력, 소울푸드, 점수
     // query : 조
     public static int[] solution(String[] info, String[] query) {
-        int[] answer = {};
-        String[] t1 = {"cpp", "java", "python", "-"};
-        String[] t2 = {"backend", "frontend", "-"};
-        String[] t3 = {"junior", "senior", "-"};
-        String[] t4 = {"chicken", "pizza", "-"};
+        int[] answer = new int[query.length];
 
-        Map<String, // 개발언어(cpp, java, python, -)
-                Map<String, // 직군(backend, frontend, -)
-                        Map<String, // 경력 (junior, senior)
-                                Map<String, //소울 푸드 (chicken, pizza)
-                                        Map<String, Integer> // 점수에 따른 인원수.
-                                        >
-                                >
-                        >
-                > tree = new HashMap<>();
+        Map<String, Object> langMap = new HashMap<>();
+        for (String s : info) {
+            String[] infos = s.split(" ");
+            Map<String, Object> jobMap = langMap.containsKey(infos[0]) ? (Map<String, Object>) langMap.get(infos[0]) : new HashMap<>();
+            Map<String, Object> careerMap = jobMap.containsKey(infos[1]) ? (Map<String, Object>) jobMap.get(infos[1]) : new HashMap<>();
+            Map<String, Object> foodMap = careerMap.containsKey(infos[2]) ? (Map<String, Object>) careerMap.get(infos[2]) : new HashMap<>();
+            Map<String, Object> scoreMap = foodMap.containsKey(infos[3]) ? (Map<String, Object>) foodMap.get(infos[3]) : new HashMap<>();
 
-        for (String s1 : t1) {
-            Map<String, Map<String, Map<String,Map<String, Map<String, Integer>>>>> map1 = new HashMap<>();
-            for (String s2 : t2) {
-                Map<String, Map<String,Map<String, Map<String, Integer>>>> map2 = new HashMap<>();
-                for (String s3 : t3) {
-                    Map<String,Map<String, Map<String, Integer>>> map3 = new HashMap<>();
-                    for (String s4 : t4) {
-                        Map<String, Map<String, Integer>> map4 = new HashMap<>();
-                        map4.put(s4, null);
-                        map3.put(s3, map4);
-                    }
-                    map2.put(s2, map3);
-                }
-                map1.put(s1, map2);
+            if (scoreMap.containsKey(infos[4])) {
+                Integer scoreCount = (Integer) (scoreMap.get(infos[4]));
+                scoreMap.put(infos[4], scoreCount + 1);
+            } else {
+                scoreMap.put(infos[4], 1);
+            }
+
+            if (!foodMap.containsKey(infos[3])) {
+                foodMap.put(infos[3], scoreMap);
+            }
+
+            if (!careerMap.containsKey(infos[2])) {
+                careerMap.put(infos[2], foodMap);
+            }
+
+            if (!jobMap.containsKey(infos[1])) {
+                jobMap.put(infos[1], careerMap);
+            }
+
+            if (!langMap.containsKey(infos[0])) {
+                langMap.put(infos[0], jobMap);
             }
         }
 
-        for (String s : info) {
-            String[] infos = s.split(" ");
-            Map<String, Map<String, Map<String, Map<String, Integer>>>> map1;
-            if (infos[0].equals("-")) {
-                map1  = tree.get("-");
-            } else {
-                map1 = tree.get("-");
-                map1 = tree.get(infos[0]);
+        for (int i = 0; i < query.length; i++) {
+            String[] qs = query[i].replaceAll(" and ", " ").split(" ");
+
+            Queue<Object> curGroupQ = new LinkedList<>();
+            curGroupQ.add(langMap);
+
+
+            int count = 0;
+            for (int y = 0; y < qs.length; y++) {
+                //"- and backend and senior and - 150"
+                if (y != qs.length-1) {
+                    int curQSize = curGroupQ.size();
+                    for (int qSize = 0; qSize < curQSize; qSize++) {
+                        Map<String, Object> curGroup = (Map<String, Object>) (curGroupQ.remove());
+
+                        String curQuery = qs[y];
+                        if (curQuery.equals("-")) {
+                            curGroupQ.addAll(curGroup.values());
+                        } else if(curGroup.containsKey(curQuery)) {
+                            curGroupQ.add(curGroup.get(curQuery));
+                        }
+                    }
+                } else {
+                    while(!curGroupQ.isEmpty()) {
+                        Map<String, Object> curGroup = (Map<String, Object>) (curGroupQ.remove());
+                        for (Map.Entry<String, Object> scoreEntry : curGroup.entrySet()) {
+                            int qScore = Integer.parseInt(scoreEntry.getKey());
+                            int compareScore = Integer.parseInt(qs[qs.length-1]);
+                            if (qScore >= compareScore) {
+                                count++;
+                            }
+                        }
+                    }
+                }
             }
 
-            Map<String, Map<String, Map<String, Integer>>> map2;
-            if (infos[1].equals("-")) {
-                map2 =  map1.get("-");
-            } else {
-                map2 = map1.get(infos[1]);
-            }
-
-            Map<String, Map<String, Integer>> map3;
-            if (infos[2].equals("-")) {
-                map3=map2.get("-");
-            } else {
-                map3=map2.get("-");
-                map3=map2.get(infos[2]);
-            }
-
-
+            answer[i] = count;
         }
 
         return answer;
     }
-
-
-
 
 
 }

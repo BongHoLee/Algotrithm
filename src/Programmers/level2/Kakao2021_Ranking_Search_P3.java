@@ -29,72 +29,63 @@ public class Kakao2021_Ranking_Search_P3 {
     // query : 조
     public static int[] solution(String[] info, String[] query) {
         int[] answer = new int[query.length];
+        Map<String, List<Integer>> group = new HashMap<>();
 
-        Map<String, Object> langMap = new HashMap<>();
         for (String s : info) {
             String[] infos = s.split(" ");
-            Map<String, Object> jobMap = langMap.containsKey(infos[0]) ? (Map<String, Object>) langMap.get(infos[0]) : new HashMap<>();
-            Map<String, Object> careerMap = jobMap.containsKey(infos[1]) ? (Map<String, Object>) jobMap.get(infos[1]) : new HashMap<>();
-            Map<String, Object> foodMap = careerMap.containsKey(infos[2]) ? (Map<String, Object>) careerMap.get(infos[2]) : new HashMap<>();
-            Map<String, Object> scoreMap = foodMap.containsKey(infos[3]) ? (Map<String, Object>) foodMap.get(infos[3]) : new HashMap<>();
 
-            if (scoreMap.containsKey(infos[4])) {
-                Integer scoreCount = (Integer) (scoreMap.get(infos[4]));
-                scoreMap.put(infos[4], scoreCount + 1);
-            } else {
-                scoreMap.put(infos[4], 1);
+            Queue<String> sq = new LinkedList<>();
+            sq.add("-");
+            sq.add(infos[0]);
+            for (int i=1; i<infos.length; i++) {
+                int qSize = sq.size();
+                if (i < infos.length-1) {
+                    for (int q=0; q<qSize; q++) {
+                        String prev = sq.remove();
+                        String cur = prev + infos[i];
+                        String all = prev + "-";
+                        sq.add(cur);
+                        sq.add(all);
+                    }
+                } else {
+                    while(!sq.isEmpty()) {
+                        String groupKey = sq.remove();
+                        List<Integer> list = group.containsKey(groupKey) ? group.get(groupKey) : new ArrayList<>();
+                        list.add(Integer.parseInt(infos[i]));
+                        group.put(groupKey, list);
+                    }
+                }
             }
+        }
 
-            if (!foodMap.containsKey(infos[3])) {
-                foodMap.put(infos[3], scoreMap);
-            }
-
-            if (!careerMap.containsKey(infos[2])) {
-                careerMap.put(infos[2], foodMap);
-            }
-
-            if (!jobMap.containsKey(infos[1])) {
-                jobMap.put(infos[1], careerMap);
-            }
-
-            if (!langMap.containsKey(infos[0])) {
-                langMap.put(infos[0], jobMap);
-            }
+        for (List<Integer> scoreList : group.values()) {
+            Collections.sort(scoreList);
         }
 
         for (int i = 0; i < query.length; i++) {
             String[] qs = query[i].replaceAll(" and ", " ").split(" ");
-
-            Queue<Object> curGroupQ = new LinkedList<>();
-            curGroupQ.add(langMap);
-
+            int score = Integer.parseInt(qs[qs.length-1]);
+            StringBuilder queryKey = new StringBuilder();
+            for (int j=0; j<qs.length-1; j++)
+                queryKey.append(qs[j]);
 
             int count = 0;
-            for (int y = 0; y < qs.length; y++) {
-                //"- and backend and senior and - 150"
-                if (y != qs.length-1) {
-                    int curQSize = curGroupQ.size();
-                    for (int qSize = 0; qSize < curQSize; qSize++) {
-                        Map<String, Object> curGroup = (Map<String, Object>) (curGroupQ.remove());
+            if (group.containsKey(queryKey.toString())) {
+                List<Integer> scoreList = group.get(queryKey.toString());
 
-                        String curQuery = qs[y];
-                        if (curQuery.equals("-")) {
-                            curGroupQ.addAll(curGroup.values());
-                        } else if(curGroup.containsKey(curQuery)) {
-                            curGroupQ.add(curGroup.get(curQuery));
+                int startIdx = 0;
+                int lastIdx = scoreList.size()-1;
+
+                if (scoreList.get(lastIdx) >= score) {
+                    while(lastIdx > startIdx) {
+                        int pos = (lastIdx + startIdx) / 2;
+                        if (scoreList.get(pos) >= score) {
+                            lastIdx = pos;
+                        } else if (scoreList.get(pos) < score) {
+                            startIdx = pos + 1;
                         }
                     }
-                } else {
-                    while(!curGroupQ.isEmpty()) {
-                        Map<String, Object> curGroup = (Map<String, Object>) (curGroupQ.remove());
-                        for (Map.Entry<String, Object> scoreEntry : curGroup.entrySet()) {
-                            int qScore = Integer.parseInt(scoreEntry.getKey());
-                            int compareScore = Integer.parseInt(qs[qs.length-1]);
-                            if (qScore >= compareScore) {
-                                count++;
-                            }
-                        }
-                    }
+                    count += scoreList.size() - lastIdx;
                 }
             }
 

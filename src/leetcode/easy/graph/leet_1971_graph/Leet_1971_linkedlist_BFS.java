@@ -1,4 +1,4 @@
-package leetcode.leet_1971_graph;
+package leetcode.easy.graph.leet_1971_graph;
 
 import java.util.*;
 

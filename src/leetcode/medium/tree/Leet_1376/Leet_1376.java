@@ -1,4 +1,4 @@
-package leetcode.Leet_1376;
+package leetcode.medium.tree.Leet_1376;
 
 // Tag : Tree
 // Difficulty : Medium

@@ -1,4 +1,4 @@
-package leetcode.Leet_331;
+package leetcode.medium.tree.Leet_331;
 
 public class Leet_331_Recursion {
     public static void main(String[] args) {

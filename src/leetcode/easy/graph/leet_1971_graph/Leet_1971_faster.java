@@ -1,6 +1,4 @@
-package leetcode.leet_1971_graph;
-
-import java.util.*;
+package leetcode.easy.graph.leet_1971_graph;
 
 public class Leet_1971_faster {
     public static void main(String[] args) {

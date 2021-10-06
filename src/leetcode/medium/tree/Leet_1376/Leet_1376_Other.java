@@ -1,4 +1,4 @@
-package leetcode.Leet_1376;
+package leetcode.medium.tree.Leet_1376;
 
 // root node부터 내려오는 TOP-DOWN 방식
 // manager[]과 informTime[]의 관계를 잘 파악해야함.

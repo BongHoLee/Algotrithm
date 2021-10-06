@@ -1,4 +1,4 @@
-package leetcode.Leet_703;
+package leetcode.medium.tree.Leet_703;
 
 import java.util.PriorityQueue;
 

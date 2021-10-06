@@ -1,4 +1,4 @@
-package leetcode.Leet_863;
+package leetcode.medium.tree.Leet_863;
 
 
 import leetcode.TreeNode;

@@ -1,4 +1,4 @@
-package leetcode.leet_1971_graph;
+package leetcode.easy.graph.leet_1971_graph;
 
 // vertices : 정점(노드)
 // vertex : 인접 정점(연결된 정점)

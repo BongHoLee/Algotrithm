@@ -1,14 +1,10 @@
-package leetcode.Leet_331;
+package leetcode.medium.tree.Leet_331;
 
 // 주어진 String이 preorder를 만족하면 true, 아니면 참
 // #은 null node를 의미한다.
 
 // preorder의 규칙을 먼저 알아야 함(ROOT -> LEFT -> RIGHT)
 
-
-import java.util.Arrays;
-import java.util.List;
-import java.util.Stack;
 
 public class Leet_331 {
     public static void main(String[] args) {

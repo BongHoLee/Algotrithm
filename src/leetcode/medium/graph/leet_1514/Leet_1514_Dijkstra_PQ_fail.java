@@ -10,41 +10,57 @@ import java.util.*;
 // 어떤 경우가 '방문'한 경우인지, 왜 '방문'한 노드는 재방문 하지 않는지
 // 머리로는 이해 했지만 말로 설명하면 어렵다. 확실히 설명할 수 있도록 하자.
 
+// 방문 노드를 PriorityQueue 사용함.
+// 근데 타임아웃남..
 
-public class Leet_1514_List {
+
+
+public class Leet_1514_Dijkstra_PQ_fail {
     public static void main(String[] args) {
-        int n = 3;
+        int n = 500;
         int[][] edges = {
-                {0,1},
-                {1,2},
-                {0,2}
+                {193, 229},
+                {133, 212},
+                {224, 465}
         };
 
         double[] succProb = {
-                0.5,
-                0.5,
-                0.2
+                0.91,
+                0.78,
+                0.64
         };
 
-        int start = 0;
-        int end = 2;
+        int start = 4;
+        int end = 364;
 
         System.out.println(maxProbability(n, edges, succProb, start, end));
     }
 
     public static double maxProbability(int n, int[][] edges, double[] succProb, int start, int end) {
         double[][] weighted = new double[n][n];
-        boolean[] visited = new boolean[n];
         Map<Integer, List<Integer>> graph = new HashMap<>();
         preMake(edges, succProb, weighted, graph);
-
-        return 0;
+        dijkstra(start, graph, weighted);
+        return weighted[start][end];
     }
 
-    private static double dijkstra(int start, int end, Map<Integer, List<Integer>> graph, boolean[] visited, double[][] weighted) {
-        visited[start] = true;
+    private static void dijkstra(int start, Map<Integer, List<Integer>> graph, double[][] weighted) {
+        PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
+        if (graph.containsKey(start)) {
+            pq.addAll(graph.get(start));
+        }
 
-        return 0;
+        while (!pq.isEmpty()) {
+            int cur = pq.poll();
+            List<Integer> adjacentNodes =  graph.get(cur);
+
+            for (Integer adjacentNode : adjacentNodes) {
+                if (weighted[start][cur] * weighted[cur][adjacentNode] > weighted[start][adjacentNode]) {
+                    weighted[start][adjacentNode] = weighted[start][cur] * weighted[cur][adjacentNode];
+                    pq.add(adjacentNode);
+                }
+            }
+        }
     }
 
     private static void preMake(int[][] edges, double[] succProb, double[][] weighted, Map<Integer, List<Integer>> graph) {

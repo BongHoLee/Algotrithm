@@ -31,7 +31,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Leet_1514_AllPathsFind {
+public class Leet_1514_AllPathsFind_fail {
     static int count = 0;
     public static void main(String[] args) {
         int n = 5;

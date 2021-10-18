@@ -1,6 +1,7 @@
 import java.util.*;
 
 public class TestCode {
+    protected String name;
     public static void main(String[] args) {
         PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
         pq.add(1);
@@ -9,10 +10,7 @@ public class TestCode {
             System.out.println(integer);
         }
     }
-
-
-
-
 }
+
 
 

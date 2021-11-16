@@ -2,7 +2,7 @@ package leetcode.medium.graph.leet_207
 
 import com.sun.org.apache.xpath.internal.operations.Bool
 
-class Leet_207_BFS {
+class Leet_207_DFS {
     fun canFinish(numCourses: Int, prerequisites: Array<IntArray>): Boolean {
         val graph = mutableMapOf<Int, MutableList<Int>>()
         val isVisited = BooleanArray(numCourses)
@@ -54,5 +54,5 @@ fun main() {
     val prerequisites = arrayOf(
         intArrayOf(1, 0)
     )
-    println(Leet_207_BFS().canFinish(numCourses, prerequisites))
+    println(Leet_207_DFS().canFinish(numCourses, prerequisites))
 }

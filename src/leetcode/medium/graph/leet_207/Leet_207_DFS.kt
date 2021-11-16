@@ -1,6 +1,5 @@
 package leetcode.medium.graph.leet_207
 
-import com.sun.org.apache.xpath.internal.operations.Bool
 
 class Leet_207_DFS {
     fun canFinish(numCourses: Int, prerequisites: Array<IntArray>): Boolean {

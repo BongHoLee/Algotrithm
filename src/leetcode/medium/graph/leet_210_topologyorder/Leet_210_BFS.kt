@@ -8,6 +8,7 @@ class Leet_210_BFS {
         val degreeArr = IntArray(numCourses)
         val order = IntArray(numCourses)
         val graph = mutableMapOf<Int, MutableList<Int>>()
+
         for (prerequisite in prerequisites) {
             val from = prerequisite[1]
             val to = prerequisite[0]

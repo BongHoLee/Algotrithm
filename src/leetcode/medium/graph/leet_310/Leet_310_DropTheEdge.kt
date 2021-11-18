@@ -5,7 +5,7 @@ import kotlin.collections.HashSet
 
 // 선 날리기 방법으로 진행해보기
 // Topologist sort에서 영감을 얻음
-
+// https://leetcode.com/problems/minimum-height-trees/discuss/76055/Share-some-thoughts
 class Leet_310_DropTheEdge {
     fun findMinHeightTrees(n: Int, edges: Array<IntArray>): List<Int> {
         if (n == 1) return mutableListOf(0)

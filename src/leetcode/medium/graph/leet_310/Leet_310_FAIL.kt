@@ -7,7 +7,7 @@ package leetcode.medium.graph.leet_310
 
 // DFS + BFS + memozation으로
 
-class Leet_310 {
+class Leet_310_FAIL {
     fun findMinHeightTrees(n: Int, edges: Array<IntArray>): List<Int> {
         val heights = Array(n) { mutableMapOf<String, Any>() }
         val visited = BooleanArray(n)
@@ -131,6 +131,6 @@ fun main() {
             intArrayOf(0, 3),
             intArrayOf(3, 4)
     )
-    println(Leet_310().findMinHeightTrees(n, edges))
+    println(Leet_310_FAIL().findMinHeightTrees(n, edges))
 }
 

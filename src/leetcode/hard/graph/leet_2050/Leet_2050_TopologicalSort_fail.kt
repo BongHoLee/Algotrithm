@@ -10,7 +10,7 @@ import java.util.*
 // 그래서 DP를 사용해야 하는구나.
 
 
-class Leet_2050_TopologicalSOrt {
+class Leet_2050_TopologicalSort_fail {
     fun minimumTime(n: Int, relations: Array<IntArray>, time: IntArray): Int {
 
         val inDegree = IntArray(n+1)
@@ -71,6 +71,6 @@ fun main() {
     )
     val time = intArrayOf(1, 6, 2, 3, 20, 22, 8)
 
-
-    println(Leet_2050_TopologicalSOrt().minimumTime(n, relations, time))
+    // expected 34 ( 2(6) + 5(20) + 7(8)) but output is 33 (fail)
+    println(Leet_2050_TopologicalSort_fail().minimumTime(n, relations, time))
 }

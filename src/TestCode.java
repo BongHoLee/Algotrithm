@@ -1,12 +1,12 @@
+import java.io.UnsupportedEncodingException;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 public class TestCode {
-    public static void main(String[] args) {
-        Queue<int[]> pq = new PriorityQueue<>((a, b) -> a[0]-b[0]);
-
-        pq.add(new int[] {0, 1, 2});
-        pq.add(new int[] {1, 2, 0});
-        System.out.println(Arrays.toString(pq.poll()));
+    public static void main(String[] args) throws UnsupportedEncodingException {
+        Set<Integer> set = new HashSet<>();
+        set.add(1);
+        System.out.println(set.add(1));
     }
 }
 

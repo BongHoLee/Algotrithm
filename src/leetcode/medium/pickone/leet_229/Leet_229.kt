@@ -1,4 +1,4 @@
-package leetcode.medium.leet_229
+package leetcode.medium.pickone.leet_229
 
 class Leet_229 {
     fun majorityElement(nums: IntArray): List<Int> {

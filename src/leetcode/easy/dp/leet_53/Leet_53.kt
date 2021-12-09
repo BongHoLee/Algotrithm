@@ -10,14 +10,12 @@ class Leet_53 {
         var max = Int.MIN_VALUE
         var toCur = 0
 
-
         for (i in nums.indices) {
             toCur = nums[i].coerceAtLeast(toCur + nums[i])
             max = max.coerceAtLeast(toCur)
         }
 
         return max
-
     }
 }
 

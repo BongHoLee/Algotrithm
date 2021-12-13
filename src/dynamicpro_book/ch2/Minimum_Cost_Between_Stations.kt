@@ -3,6 +3,11 @@ package dynamicpro_book.ch2
 import kotlin.reflect.jvm.internal.impl.utils.DFS
 
 // 각 station을 거치느냐 거치지 않느냐로 분할 정복이 가능할 듯 함.
+// 최적의 하위 구조를 갖는다.
+// -> 현재의 최적해를 subproblem의 최적해로부터 어떻게 구할 수 있다면. '최적의 하위 구조'를 갖는다.
+// minCost(0, d) = MIN { (minCost(0, 1) + minCost(1, d)) , (minCOst(0, 2) + minCost(2, d)), .... }
+// subProblem들의 최적해들을 비교해서 현재의 최적 해를 얻을 수 있다. -> 현재의 최적해를 subproblem의 최적해로부터 어떻게 구할 수 있다. => '최적의 하위 구조'를 갖는다.
+
 class Minimum_Cost_Between_Stations {
 
     fun minimumCost(stations: Array<IntArray>, start: Int, dest: Int) : Int{

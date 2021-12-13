@@ -18,7 +18,7 @@ class Minimum_Cost_Between_Stations2 {
 
             // F(s + i, d)
             val right = minimumCost(stations, i, dest)
-            
+
             min = Math.min(min, left + right)
         }
 

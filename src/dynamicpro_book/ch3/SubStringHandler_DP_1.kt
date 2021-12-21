@@ -21,8 +21,9 @@ class SubStringHandler_DP_1 {
                 val right = arr[x+y][x+y]
                 arr[x][x+y] = left + right
 
-                if ((x+x+y+1)%2 == 0) {
-                    val splitIdx = (x+x+y+1)/2
+                // from ~ to 까지 반으로 나눌수 있다면(substring이 반으로 나눠질 수 있다면)
+                if (( (x) + (x+y) +1)%2 == 0) {
+                    val splitIdx = ( (x) + (x+y) +1) / 2
                     if (arr[x][splitIdx-1] == arr[splitIdx][x+y] && substr.length < str.substring(x, x+y+1).length) {
                         substr = str.substring(x, x+y+1)
                     }

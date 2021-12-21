@@ -11,8 +11,8 @@ class Minimum_Cost_Between_Stations_DP {
         val minCost = Array(stations.size) {IntArray(stations[0].size)}
 
         for (y in stations.indices) {
-            var sumMin = Int.MAX_VALUE
             for (x in y until stations[y].size) {
+
                 if (y==0) {
                     minCost[y][x] = stations[y][x]
                 } else {

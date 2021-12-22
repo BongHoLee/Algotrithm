@@ -3,6 +3,7 @@ package dynamicpro_book.ch2
 class Minimum_Cost_Between_Stations_DP_SOLUTION {
 
     fun minimumCost(stations: Array<IntArray>) : Int {
+
         // minValue[i] : i역 까지 최소 거리
         val minValue = IntArray(stations.size)
 
@@ -10,6 +11,7 @@ class Minimum_Cost_Between_Stations_DP_SOLUTION {
             minValue[y] = stations[0][y]
 
             for (x in 0 until y) {
+                // minValue[x]를 거쳐서 오는 거리 검사
                 minValue[y] = Math.min(minValue[y], minValue[x] + stations[x][y])
             }
         }

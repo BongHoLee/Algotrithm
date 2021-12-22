@@ -1,6 +1,5 @@
 package other.dp
 
-import com.sun.xml.internal.fastinfoset.util.StringArray
 
 // 공통 부분 문자열
 

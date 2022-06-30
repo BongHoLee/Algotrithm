@@ -73,7 +73,7 @@ public class BestAlbum_level3 {
             for (int i = 0; (i < playIndex.size() && i < 2); i++) {
                 finals.add(playIndex.get(i));
             }
-        }
+        };
 
         int[] answer = new int[finals.size()];
         for (int i = 0; i < finals.size(); i++) {

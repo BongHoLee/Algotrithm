@@ -1,71 +1,60 @@
 package Programmers.highscore_kit;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class FindPrimeNumber_level2 {
 
-    static int count = 0;
+    static List<Integer> list = new ArrayList<>();
     public static void main(String[] args) {
-        String numbers = "1234";
-        new FindPrimeNumber_level2().getPermutationTest("", numbers);
-        System.out.println(count);
+        String numbers = "002";
+        System.out.println(new FindPrimeNumber_level2().solution(numbers));
+        System.out.println(list);
+
     }
 
-    private Set<Integer> set =new HashSet<>();
+    private Set<Integer> set = new HashSet<>();
     public int solution(String numbers) {
-        int answer = 0;
-        int numbersSize = numbers.length();
-
-
-        return answer;
+        return permutationAndCheckPrime("", numbers);
     }
 
     // 자신의 자릿수에 대한 경우만 생각하고 이하 자릿수는 재귀에 위임한다!
-    private String getPermutation(String numbers, int originLength) {
-        if (numbers.length() == 0) {
-            return numbers;
-        } else {
-            int numbersSize = numbers.length();
-            for (int i=0; i<numbersSize; i++) {
-                String before = numbers.substring(0, i);
-                String center = Character.toString(numbers.charAt(i));
-                String after = numbers.substring(i+1, numbersSize);
+    private int permutationAndCheckPrime(String numbers, String originNumbers) {
+        int curPositionsPrimeCount = 0;
+        if (originNumbers.length() > 0) {
+            for (int i=0; i<originNumbers.length(); i++) {
+                String before = originNumbers.substring(0, i);
+                String after = originNumbers.substring(i+1);
+                String addedNumber = Character.toString(originNumbers.charAt(i));
 
-                String next = before + after;
+                String curPositionNumbers = numbers + addedNumber;
+                String nextNumbers = before + after;
 
-            }
-
-            return numbers;
-        }
-    }
-
-    // 자기 부분만 처리하고 나머지 자리들은 하위에 위임!
-    public void getPermutationTest(String curNumbers, String existsNumbers) {
-        if (existsNumbers.length() == 0) {
-            count++;
-            System.out.println(curNumbers);
-        } else {
-
-            // numbers에 덧붙이는 방식
-            int size = existsNumbers.length();
-            for (int i=0; i<size; i++) {
-                String before = existsNumbers.substring(0, i);
-                String added = Character.toString(existsNumbers.charAt(i));
-                String after = existsNumbers.substring(i+1, size);
-
-                String nextNumbers = curNumbers + added;
-                String nextExistsNumbers = before + after;
-                getPermutationTest(nextNumbers, nextExistsNumbers);
+                curPositionsPrimeCount += isPrime(Integer.parseInt(curPositionNumbers)) ? 1 : 0;
+                curPositionsPrimeCount += permutationAndCheckPrime(curPositionNumbers, nextNumbers);
             }
         }
+
+        return curPositionsPrimeCount;
     }
 
     private boolean isPrime(int number) {
-        if (set.contains(number)) return false;
-        else {
+        if (number < 2 || set.contains(number)) return false;
+        set.add(number);
+
+        if (number == 2) {
             return true;
+        } else {
+
+            int sqrt = (int)(Math.sqrt(number) + 1);
+            for (int i=2; i<=sqrt; i++) {
+                if (number%i == 0) {
+                    return false;
+                }
+            }
         }
+        return true;
     }
 }

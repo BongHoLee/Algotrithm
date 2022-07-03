@@ -1,5 +1,16 @@
 package Programmers.level3.graph
 
+fun main() {
+    val n = 3
+    val computers = arrayOf(
+        intArrayOf(1, 1, 0),
+        intArrayOf(1, 1, 1),
+        intArrayOf(0, 1, 1)
+    )
+
+    println(Network().solution(n, computers))
+}
+
 class Network {
     fun solution(n: Int, computers: Array<IntArray>): Int {
         var networkCount = 0
@@ -36,13 +47,3 @@ class Network {
     }
 }
 
-fun main() {
-    val n = 3
-    val computers = arrayOf(
-        intArrayOf(1, 1, 0),
-        intArrayOf(1, 1, 1),
-        intArrayOf(0, 1, 1)
-    )
-
-    println(Network().solution(n, computers))
-}

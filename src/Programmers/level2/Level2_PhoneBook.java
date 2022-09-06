@@ -15,16 +15,13 @@ public class Level2_PhoneBook {
         boolean answer = true;
         List<String> phones = Arrays.asList(phone_book);
 
-        Collections.sort(phones, new Comparator<String>() {
-            @Override
-            public int compare(String o1, String o2) {
-                if (o1.length() < o2.length())
-                    return -1;
-                else if (o1.length() > o2.length())
-                    return 1;
-                else
-                    return 0;
-            }
+        phones.sort((o1, o2) -> {
+            if (o1.length() < o2.length())
+                return -1;
+            else if (o1.length() > o2.length())
+                return 1;
+            else
+                return 0;
         });
 
         for (int i=0; i<phones.size() && answer; i++) {

@@ -7,5 +7,26 @@ package ohouse;
  */
 
 public class P3 {
+    public static void main(String[] args) {
 
+    }
+
+
+    public int solution(String word) {
+        return 0;
+    }
+}
+
+class EachKey {
+    int x;
+    int y;
+
+    public EachKey(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    public int calcDistanceWith(EachKey other) {
+        return Math.abs(this.x - other.x) + Math.abs(this.y - other.y);
+    }
 }

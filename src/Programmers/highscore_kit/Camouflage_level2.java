@@ -38,13 +38,17 @@ public class Camouflage_level2 {
         return combinationCountOf(values);
     }
 
+    // 이 2중 for문을 이해해야 하는데..
     private int combinationCountOf(Integer[] values) {
         int result = 0;
-        for (int i = 0; i< values.length; i++) {
+        for (int i = 0; i< values.length; i++) {        // i 번째 카테고리를 포함했을 때
+
             int eachCount = values[i];
             for (int j = i+1; j< values.length; j++) {
+                // (j번째 카테고리를 포함하지 않는 경우) + (j번째 카테고리를 포함하는 경우)
                 eachCount = eachCount + (eachCount * values[j]);
             }
+
             result += eachCount;
         }
 

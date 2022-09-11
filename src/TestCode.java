@@ -2,13 +2,10 @@ import java.util.*;
 
 public class TestCode {
     public static void main(String[] args) {
-        int N = 28;
-
-        System.out.println();
+        Map<String, Integer> map = new HashMap<>();
+        System.out.println(map.get("1"));
     }
-
 }
-
 
 
 

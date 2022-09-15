@@ -18,18 +18,18 @@ public class Permutation {
     }
 
     // 각 재귀는 자신의 자릿수에 대해서만 계산하고 나머지 문자열은 재귀에 위임한다!
-    public void stringPermutation(String numbers, String originNumbers) {
-        if (originNumbers.length() == 0) {
+    public void stringPermutation(String madeNumbers, String remainNumbers) {
+        if (remainNumbers.length() == 0) {
             count++;
-            System.out.println(numbers);
+            System.out.println(madeNumbers);
         } else {
-            // originNumbers에 있는 숫자들 중 하나를 뽑아서 numbers에 붙여나간다.
-            // 뽑은 숫자를 제외한 originNumbers와 뽑은 숫자를 붙인 numbers를 다음 재귀에 전달한다.
-            for(int i=0; i<originNumbers.length(); i++) {
-                String before = originNumbers.substring(0, i);
-                String after = originNumbers.substring(i+1);
-                String cur = Character.toString(originNumbers.charAt(i));
-                stringPermutation(cur + numbers, before + after);
+            // remainNumbers 있는 숫자들 중 하나를 뽑아서 madeNumbers 붙여나간다.
+            // 뽑은 숫자를 제외한 remainNumbers 중 뽑은 숫자를 붙인 madeNumbers를 다음 재귀에 전달한다.
+            for(int i=0; i<remainNumbers.length(); i++) {
+                String pre = remainNumbers.substring(0, i);
+                String suf = remainNumbers.substring(i+1);
+                String cur = Character.toString(remainNumbers.charAt(i));
+                stringPermutation(cur + madeNumbers, pre + suf);
             }
         }
     }
